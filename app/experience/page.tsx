@@ -57,8 +57,12 @@ export default function Experience() {
 
       <section className="experienceBlock sectionPad" id="salesforce">
         <div className="sectionTop"><p className="kicker">Salesforce administration</p><p>Current credential · current capability · verified delivery</p></div>
+        <div className="credentialCard">
+          <p className="kicker">Current credential</p>
+          <h2>Salesforce Certified Administrator</h2>
+          <p>Current professional capability in Salesforce administration, configuration, Flows, reporting, access, implementation and user support. Available for future Salesforce work. This is not one of the three primary active workstreams, but it remains a current professional platform skill.</p>
+        </div>
         <div className="roleList">
-          <article><time>Credential</time><div><h2>Salesforce Certified Administrator</h2><p>Current professional capability in Salesforce administration, configuration, Flows, reporting, access, implementation and user support. Available for future Salesforce work. This is not one of the three primary active workstreams, but it remains a current professional platform skill.</p></div></article>
           <article><time>Feb 2023 to Feb 2024</time><div><h2>Salesforce Administrator → Project Lead</h2><h3>Innerspace</h3><p>Organisation configuration, custom objects and fields, Flows, validation rules, page layouts, reports and dashboards, user access, training and adoption support, and project coordination.</p></div></article>
           <article><time>Nov 2023 to Apr 2025</time><div><h2>Freelance Salesforce Administrator</h2><h3>Bridges, London</h3><p>Organisation review, sandbox analysis, requirements gathering and solution proposals.</p></div></article>
         </div>
@@ -67,6 +71,10 @@ export default function Experience() {
       <section className="experienceBlock legacyBlock sectionPad" id="legacy">
         <div className="sectionTop"><p className="kicker">Legacy Habitat Management</p><p>Historical systems evidence · 2018 to 2022</p></div>
         <div className="legacyHeader"><h2>Business management with measurable results.</h2><p>Led business management across finance, payroll, HR, recruitment, fleet, logistics, suppliers and customers. Administered Sage within the company&rsquo;s finance and accounting operations and improved the accuracy and structure of Sage data. Implemented and rolled out Dayforce HCM for HR and payroll. Managed payroll, benefits and reconciliations, and supported recruitment, training, fleet management and logistics.</p></div>
+        <div className="legacySystems">
+          <article><span>Historical finance</span><h3>Sage</h3><p>Administered within finance and accounting operations during the Legacy Habitat Management role.</p></article>
+          <article><span>HR rollout</span><h3>Dayforce</h3><p>Implemented and rolled out Dayforce HCM for HR and payroll.</p></article>
+        </div>
         <div className="legacyNumbers"><div><strong>90%</strong><span>reduction in the debtor list</span></div><div><strong>£100k+</strong><span>contracts managed</span></div><div><strong>Dayforce</strong><span>implemented and rolled out for HR and payroll</span></div></div>
       </section>
 

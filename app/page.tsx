@@ -1,5 +1,6 @@
 import { ArrowLink, SiteFooter, SiteNav } from "./components";
 import { ConcentricGraphic } from "./ConcentricGraphic";
+import { ProcessStrip } from "./ProcessStrip";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         </div>
         <div className="heroMain">
           <div className="heroCopy">
-            <p className="kicker">English communication · Conference operations · Digital systems</p>
+            <p className="kicker kickerHero">English communication · Conference operations · Digital systems</p>
             <h1>
               <span>I make complicated</span>
               <span className="heroAccent"><em>work.</em></span>
@@ -39,18 +40,24 @@ export default function Home() {
         <div className="pillarList">
           <article>
             <span className="pillarNumber">01</span>
-            <h3>English communication and education</h3>
-            <p>Professional English, conversation, interview preparation, proofreading and communication coaching for learners, schools and technical teams.</p>
+            <div className="pillarBody">
+              <h3>English communication and education</h3>
+              <p>Professional English designed around real conversations, workplaces and learners.</p>
+            </div>
           </article>
           <article>
             <span className="pillarNumber">02</span>
-            <h3>International conference operations</h3>
-            <p>Conference delivery, academic platforms, hybrid events, publishing, documentation and the operational systems that support them.</p>
+            <div className="pillarBody">
+              <h3>International conference operations</h3>
+              <p>Connected delivery across academic programmes, people, platforms and publishing.</p>
+            </div>
           </article>
           <article>
             <span className="pillarNumber">03</span>
-            <h3>Human-centred digital systems and products</h3>
-            <p>Client-owned websites, accessible learning products and connected platforms designed around real users and constraints.</p>
+            <div className="pillarBody">
+              <h3>Human-centred digital systems</h3>
+              <p>Owned and maintainable products shaped around how people actually work.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -63,15 +70,7 @@ export default function Home() {
             <p>Pretalx and Pretix are operational and currently undergoing user testing as part of one connected conference and publication process.</p>
             <ArrowLink href="/projects#ils">Read the full case study</ArrowLink>
           </div>
-          <div className="miniArchitecture" aria-label="Reduced ILS operational journey">
-            <span>Discover<b>WordPress</b></span>
-            <i>↓</i>
-            <span>Submit and review<b>Pretalx</b></span>
-            <i>↓</i>
-            <span>Register and pay<b>Pretix</b></span>
-            <i>↓</i>
-            <span>Publish<b>Open Journal Systems</b></span>
-          </div>
+          <ProcessStrip />
         </div>
       </section>
 
@@ -97,10 +96,10 @@ export default function Home() {
             <div className="cardLinks"><ArrowLink href="/projects#romanian">Case study</ArrowLink><ArrowLink href="https://say-it-your-way-romanian.pages.dev/" external>Live app</ArrowLink></div>
           </article>
           <article>
-            <p className="cardMeta">English education · 2022 to present</p>
-            <h3>English for real life and work</h3>
-            <p>Personalised English for private learners, professionals, schools and international technical teams.</p>
-            <div className="cardLinks"><ArrowLink href="/experience#english">Experience</ArrowLink><ArrowLink href="https://devaccelerator.io/" external>DevAccelerator</ArrowLink></div>
+            <p className="cardMeta">Professional English programme · Current</p>
+            <h3>DevAccelerator</h3>
+            <p>Conversational and professional English for data engineers and technical teams.</p>
+            <div className="cardLinks"><ArrowLink href="/projects#devaccelerator">Programme</ArrowLink><ArrowLink href="https://devaccelerator.io/" external>Visit site</ArrowLink></div>
           </article>
         </div>
       </section>
@@ -116,6 +115,7 @@ export default function Home() {
 
       <section className="contactSection sectionPad" id="contact">
         <p className="kicker">Contact</p>
+        <p className="contactContext">English coaching, conference operations, or digital systems.</p>
         <h2>Have something complicated?</h2>
         <a className="contactLink" href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
         <p className="contactMeta"><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p>
