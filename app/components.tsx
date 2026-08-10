@@ -1,12 +1,26 @@
 import type { ReactNode } from "react";
+import { BrandMark } from "./BrandMark";
 import { MobileNav } from "./MobileNav";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+export function PageLocator({ parent, current }: { parent: { href: string; label: string }; current: string }) {
+  return (
+    <p className="pageLocator">
+      <a href={parent.href}>{parent.label}</a>
+      <span aria-hidden="true">/</span>
+      <span className="pageLocatorCurrent">{current}</span>
+    </p>
+  );
+}
+
 export function SiteNav({ active = "" }: { active?: "home" | "projects" | "experience" | "" }) {
   return (
     <nav className="siteNav" aria-label="Primary navigation">
-      <a className="brand" href="/">KP.</a>
+      <a className="brand" href="/">
+        <BrandMark size={24} />
+        <span>KP.</span>
+      </a>
       <div className="siteLinks">
         <a className={active === "projects" ? "active" : ""} href="/projects">Work</a>
         <a className={active === "experience" ? "active" : ""} href="/experience">Experience</a>
@@ -21,7 +35,10 @@ export function SiteNav({ active = "" }: { active?: "home" | "projects" | "exper
 export function SiteFooter() {
   return (
     <footer className="siteFooter">
-      <div className="footerBrand">KP.</div>
+      <div className="footerBrand">
+        <BrandMark size={22} />
+        <span>KP.</span>
+      </div>
       <nav className="footerNav" aria-label="Footer navigation">
         <a href="/">Home</a>
         <a href="/projects">Work</a>
