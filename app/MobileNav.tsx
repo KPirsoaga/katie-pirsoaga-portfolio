@@ -9,7 +9,7 @@ const links = [
   { href: "/#about", label: "About", key: "about" as const },
 ];
 
-const contactHref = "mailto:kpirsoaga@protonmail.com";
+const contactHref = "https://www.linkedin.com/in/katie-pirsoaga";
 
 export function MobileNav({
   active = "",
@@ -108,6 +108,8 @@ export function MobileNav({
             ref={contactRef}
             className="mobileNavContact"
             href={contactHref}
+            target="_blank"
+            rel="noreferrer noopener"
             onClick={closeMenu}
           >
             Let&rsquo;s talk

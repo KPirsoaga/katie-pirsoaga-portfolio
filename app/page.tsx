@@ -128,8 +128,15 @@ export default function Home() {
         <p className="kicker">Contact</p>
         <p className="contactContext">English coaching, conference operations, or digital systems.</p>
         <h2>Have something complicated?</h2>
-        <a className="contactLink" href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
-        <p className="contactMeta"><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p>
+        <a
+          className="contactLink"
+          href="https://www.linkedin.com/in/katie-pirsoaga"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Let&rsquo;s talk <span aria-hidden="true">↗</span>
+        </a>
+        <p className="contactMeta">Pitești, Romania</p>
       </section>
       <SiteFooter />
     </main>

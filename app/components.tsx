@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { BrandMark } from "./BrandMark";
 import { MobileNav } from "./MobileNav";
 
+const linkedInHref = "https://www.linkedin.com/in/katie-pirsoaga";
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export function SiteNav({ active = "" }: { active?: "home" | "projects" | "experience" | "" }) {
@@ -17,7 +18,14 @@ export function SiteNav({ active = "" }: { active?: "home" | "projects" | "exper
         <a href="/#about">About</a>
       </div>
       <MobileNav active={active} />
-      <a className="contactButton desktopOnly" href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s talk <Arrow /></a>
+      <a
+        className="contactButton desktopOnly"
+        href={linkedInHref}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Let&rsquo;s talk <Arrow />
+      </a>
     </nav>
   );
 }
@@ -33,7 +41,7 @@ export function SiteFooter() {
         <a href="/">Home</a>
         <a href="/projects">Work</a>
         <a href="/experience">Experience</a>
-        <a href="mailto:kpirsoaga@protonmail.com">Contact</a>
+        <a href={linkedInHref} target="_blank" rel="noreferrer noopener">Contact</a>
         <a href="#top">Back to top</a>
       </nav>
       <p className="footerMeta">© 2026 Katie Pirsoaga · English · conference operations · digital systems</p>
