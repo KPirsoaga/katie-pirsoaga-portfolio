@@ -8,12 +8,10 @@ type SectionLink = {
 };
 
 export function SectionNav({
-  parentHref,
-  parentLabel,
+  label,
   links,
 }: {
-  parentHref: string;
-  parentLabel: string;
+  label: string;
   links: SectionLink[];
 }) {
   const [activeId, setActiveId] = useState(links[0]?.id ?? "");
@@ -45,15 +43,9 @@ export function SectionNav({
     return () => observer.disconnect();
   }, [links]);
 
-  const activeLabel = links.find((link) => link.id === activeId)?.label ?? links[0]?.label ?? "";
-
   return (
-    <nav className="sectionNav" aria-label={`${parentLabel} section navigation`}>
-      <div className="editorialLocator">
-        <a href={parentHref}>{parentLabel}</a>
-        <span aria-hidden="true">/</span>
-        <span className="editorialLocatorCurrent" aria-current="location">{activeLabel}</span>
-      </div>
+    <nav className="sectionNav" aria-label={`${label} section navigation`}>
+      <span>{label}</span>
       <div className="sectionNavLinks">
         {links.map((link) => (
           <a
