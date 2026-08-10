@@ -49,4 +49,8 @@ test("published content meets editorial requirements", async () => {
   assert.match(home, /mobileNavButton/);
   assert.match(home, /KP\./);
   assert.match(projects, /Skills and applications/);
+  assert.match(projects, /catalogue of systems, products and programmes/);
+  assert.match(projects, /DevAccelerator/);
+  assert.match(home, /DevAccelerator/);
+  assert.match(experience, /credentialCard/);
 });

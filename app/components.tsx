@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { BrandMark } from "./BrandMark";
 import { MobileNav } from "./MobileNav";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
@@ -6,7 +7,10 @@ const Arrow = () => <span aria-hidden="true">↗</span>;
 export function SiteNav({ active = "" }: { active?: "home" | "projects" | "experience" | "" }) {
   return (
     <nav className="siteNav" aria-label="Primary navigation">
-      <a className="brand" href="/">KP.</a>
+      <a className="brand" href="/">
+        <BrandMark size={20} />
+        <span>KP.</span>
+      </a>
       <div className="siteLinks">
         <a className={active === "projects" ? "active" : ""} href="/projects">Work</a>
         <a className={active === "experience" ? "active" : ""} href="/experience">Experience</a>
@@ -21,7 +25,10 @@ export function SiteNav({ active = "" }: { active?: "home" | "projects" | "exper
 export function SiteFooter() {
   return (
     <footer className="siteFooter">
-      <div className="footerBrand">KP.</div>
+      <div className="footerBrand">
+        <BrandMark size={18} />
+        <span>KP.</span>
+      </div>
       <nav className="footerNav" aria-label="Footer navigation">
         <a href="/">Home</a>
         <a href="/projects">Work</a>
