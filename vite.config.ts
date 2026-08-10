@@ -10,6 +10,7 @@ const { d1, r2 } = hostingConfig;
 const usePollingWatcher = process.env.USE_POLLING_WATCHER === "1";
 
 const localBindingConfig = {
+  name: "portfolio",
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1

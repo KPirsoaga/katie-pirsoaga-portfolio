@@ -29,4 +29,5 @@ test("renders accessible document metadata", async () => {
   const html = await response.text();
   assert.match(html, /<html[^>]*\blang=["']en-GB["']/i);
   assert.doesNotMatch(html, /\bcodex-preview\b/i);
+  assert.match(html, /portfolio\.katiepirsoaga\.workers\.dev/);
 });

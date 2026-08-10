@@ -2,7 +2,7 @@
 
 Professional portfolio website for Katie Pirsoaga, covering English communication, international conference operations and human-centred digital systems.
 
-Live site: [katie-pirsoaga-portfolio.katiepirsoaga.chatgpt.site](https://katie-pirsoaga-portfolio.katiepirsoaga.chatgpt.site)
+Live site: [portfolio.katiepirsoaga.workers.dev](https://portfolio.katiepirsoaga.workers.dev)
 
 ## Routes
 

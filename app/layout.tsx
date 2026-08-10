@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio.katiepirsoaga.workers.dev"),
   title: "Katie Pirsoaga | English · Conference Operations · Digital Systems",
   description:
     "Professional English communication, international conference operations and human-centred digital products.",
