@@ -1,5 +1,5 @@
 import { ArrowLink, SiteFooter, SiteNav } from "./components";
-import { ConcentricGraphic } from "./ConcentricGraphic";
+import { HeroDisc } from "./HeroDisc";
 import { ProcessStrip } from "./ProcessStrip";
 
 export default function Home() {
@@ -7,23 +7,34 @@ export default function Home() {
     <main>
       <SiteNav active="home" />
       <header className="homeHero sectionPad" id="top">
-        <div className="heroTop">
-          <p className="heroIdentity">Katie Pirsoaga</p>
-          <p className="heroLocation">British · Based in Romania · Working internationally</p>
-        </div>
-        <div className="heroMain">
-          <div className="heroCopy">
-            <p className="kicker kickerHero">English communication · Conference operations · Digital systems</p>
+        <p className="heroLocationLine">
+          <span className="heroLocationDot" aria-hidden="true" />
+          British · Based in Romania · Working internationally
+        </p>
+
+        <div className="heroScene">
+          <HeroDisc />
+          <div className="heroHeadline">
             <h1>
-              <span>I make complicated</span>
-              <span className="heroAccent"><em>work.</em></span>
+              <span className="heroLine heroLine--main">I make complicated</span>
+              <span className="heroLine heroLine--work"><em>work.</em></span>
             </h1>
-            <p className="heroSummary">
-              I teach and coach professional English, run international conference operations and build human-centred digital systems around the people who use them.
-            </p>
-            <ArrowLink href="/projects">Explore the work</ArrowLink>
           </div>
-          <ConcentricGraphic className="heroGraphic" />
+        </div>
+
+        <div className="heroLower">
+          <div className="heroIdentityLines">
+            <p>English communication</p>
+            <p>Conference operations</p>
+            <p>Digital systems</p>
+          </div>
+          <p className="heroLead">
+            I bring together people, processes, communication and digital systems to make complicated work clearer and easier to run.
+          </p>
+          <a className="heroCircleCta" href="/projects" aria-label="Explore my work">
+            Explore my work
+            <span className="heroCircleArrow" aria-hidden="true">↓</span>
+          </a>
         </div>
       </header>
 

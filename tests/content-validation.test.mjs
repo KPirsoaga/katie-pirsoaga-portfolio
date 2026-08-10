@@ -42,7 +42,8 @@ test("published content meets editorial requirements", async () => {
   assert.match(experience, /Sage/);
   assert.match(home, /I make complicated/);
   assert.match(home, /work\./);
-  assert.match(home, /English communication · Conference operations · Digital systems/);
+  assert.match(home, /English communication[\s\S]*Conference operations[\s\S]*Digital systems/);
+  assert.match(home, /Explore my work/);
   assert.match(projects, /Open Journal Systems/);
   assert.match(all, /Venueless/);
   assert.match(all, /Say It Your Way Romanian/);
