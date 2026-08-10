@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { MobileNav } from "./MobileNav";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -12,6 +13,7 @@ export function SiteNav({ dark = false, active = "" }: { dark?: boolean; active?
         <a className={active === "experience" ? "active" : ""} href="/experience">Experience</a>
         <a href="/#about">About</a>
       </div>
+      <MobileNav dark={dark} active={active} />
       <a className="contactButton" href="mailto:kpirsoaga@protonmail.com">Contact <Arrow /></a>
     </nav>
   );
@@ -21,7 +23,7 @@ export function SiteFooter() {
   return (
     <footer className="siteFooter">
       <span>KP</span>
-      <p>International Operations &amp; Systems Manager</p>
+      <p>English · conference operations · digital systems</p>
       <p>© 2026 Katie Pirsoaga · <a href="#top">Back to top ↑</a></p>
     </footer>
   );

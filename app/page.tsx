@@ -10,9 +10,9 @@ export default function Home() {
           <p>British · Based in Romania · Working internationally</p>
         </div>
         <div className="heroCore">
-          <p className="kicker lightText">International Operations &amp; Systems Manager</p>
+          <p className="kicker lightText">English communication · Conference operations · Human-centred digital systems</p>
           <h1>I build the structure<br />behind complicated work.</h1>
-          <p className="heroSummary">Operations, digital systems and communication—brought together around the people who need the work to function.</p>
+          <p className="heroSummary">I teach and coach professional English, manage international conference operations and platforms, and build digital products people can own and use.</p>
         </div>
         <div className="heroEvidence">
           <div><strong>6</strong><span>international conferences supported in 2026</span></div>
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="sectionTop"><p className="kicker">Capabilities</p><p>Four connected areas</p></div>
         <div className="capabilityList">
           <article><span>01</span><h3>Operations &amp; delivery</h3><p>Conference delivery, workflows, documentation, stakeholders, administration and international coordination.</p></article>
-          <article><span>02</span><h3>Systems &amp; infrastructure</h3><p>Platform architecture, VPS environments, migrations, publishing systems, monitoring and CRM.</p></article>
+          <article><span>02</span><h3>Systems &amp; infrastructure</h3><p>Platform architecture, VPS environments, publishing systems, monitoring and CRM administration.</p></article>
           <article><span>03</span><h3>Product &amp; user experience</h3><p>Requirements, accessible interfaces, content models, testing and maintainable client-owned systems.</p></article>
           <article><span>04</span><h3>Communication &amp; content</h3><p>English education, academic communication, proofreading, social media and video production.</p></article>
         </div>
@@ -45,13 +45,13 @@ export default function Home() {
         <div className="featureGrid">
           <div>
             <h2>One researcher journey.<br /><em>Specialist systems underneath.</em></h2>
-            <p>I manage conference operations while designing the academic ecosystem behind them: Pretalx, OJS, VPS infrastructure, monitoring, Google Workspace, automation and the next registration layer.</p>
+            <p>I run conference operations and administer the academic platform behind them. Pretalx and Pretix are operational and currently undergoing user testing as part of one connected conference process.</p>
             <ArrowLink href="/projects#ils">Explore the ILS case study</ArrowLink>
           </div>
-          <div className="miniArchitecture" aria-label="Simplified ILS platform journey">
+          <div className="miniArchitecture" aria-label="Simplified ILS operational journey">
             <span>Discover<b>WordPress</b></span><i>↓</i>
             <span>Submit &amp; review<b>Pretalx</b></span><i>↓</i>
-            <span>Register<b>Pretix</b></span><i>↓</i>
+            <span>Register &amp; pay<b>Pretix</b></span><i>↓</i>
             <span>Publish<b>OJS</b></span>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="cardLinks"><ArrowLink href="/projects#romanian">Case study</ArrowLink><ArrowLink href="https://say-it-your-way-romanian.pages.dev/" external>Live app</ArrowLink><ArrowLink href="https://github.com/KPirsoaga/Say_It_Your_Way_Romanian" external>GitHub</ArrowLink></div>
           </article>
           <article>
-            <p className="cardMeta">English education · 2022—present</p>
+            <p className="cardMeta">English education · 2022 to present</p>
             <h3>English for real life and work</h3>
             <p>Personalised English for private learners, professionals, schools and international technical teams.</p>
             <div className="cardLinks"><ArrowLink href="/experience#english">Experience</ArrowLink><ArrowLink href="https://devaccelerator.io/" external>DevAccelerator</ArrowLink></div>
@@ -82,12 +82,12 @@ export default function Home() {
       </section>
 
       <section className="homeToolkit sectionPad softSection">
-        <div className="toolkitIntro"><p className="kicker">Working toolkit</p><h2>Applications in context.</h2></div>
+        <div className="toolkitIntro"><p className="kicker">Skills &amp; applications</p><h2>Current systems and tools.</h2></div>
         <div className="compactTools">
-          <div><b>Own &amp; administer</b><p>Pretalx · OJS · WordPress · Google Workspace · VPS infrastructure</p></div>
-          <div><b>Build &amp; configure</b><p>React · TypeScript · Vite · TinaCMS · Salesforce · Cloudflare</p></div>
-          <div><b>Operate &amp; publish</b><p>WooCommerce · Stripe · Sage · Dayforce · Canva · YouTube</p></div>
-          <div><b>Developing &amp; roadmap</b><p>n8n · Pretix · Venueless · certificates · researcher accounts</p></div>
+          <div><b>Conference and organisational systems</b><p>Pretalx · Pretix · Open Journal Systems · WordPress · Google Workspace · VPS infrastructure · monitoring</p></div>
+          <div><b>Products and websites</b><p>GitHub · Cloudflare · React · TypeScript · Vite · TinaCMS · PWA</p></div>
+          <div><b>CRM and system administration</b><p>Salesforce administration · configuration · Flows · reporting · access · implementation · user support</p></div>
+          <div><b>Developing and roadmap</b><p>n8n: Installed and developing · Venueless: Roadmap</p></div>
         </div>
       </section>
 
@@ -100,7 +100,7 @@ export default function Home() {
         <p className="kicker">Start a conversation</p>
         <h2>Have something complicated?</h2>
         <a href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s make it work. <span>↗</span></a>
-        <div><p>International operations · systems · communication</p><p><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p></div>
+        <div><p>English · conference operations · digital products</p><p><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p></div>
       </section>
       <SiteFooter />
     </main>

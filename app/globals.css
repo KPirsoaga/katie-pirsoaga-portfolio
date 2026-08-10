@@ -23,10 +23,18 @@ p { text-wrap: pretty; }
 .siteNav { position: sticky; z-index: 30; top: 0; height: 78px; padding: 0 3.5vw; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); background: rgba(246,245,239,.96); backdrop-filter: blur(12px); }
 .navDark { color: var(--ivory); border-color: var(--light-line); background: rgba(16,39,31,.96); }
 .brand { font: 700 25px/1 Georgia, serif; letter-spacing: -.08em; }
-.siteLinks { display: flex; gap: 34px; }
-.siteLinks a, .contactButton { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.siteLinks { display: flex; gap: 34px; justify-self: center; }
+.siteLinks a, .contactButton, .mobileNavButton { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .siteLinks a { position: relative; padding: 29px 0 26px; }.siteLinks a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--fern); }.navDark .siteLinks a.active::after { background: var(--sage); }
 .contactButton { justify-self: end; padding: 11px 16px; border: 1px solid currentColor; border-radius: 99px; }
+.mobileNavWrap { display: none; justify-self: end; position: relative; }
+.mobileNavButton { padding: 11px 16px; border: 1px solid currentColor; border-radius: 99px; background: transparent; color: inherit; cursor: pointer; }
+.mobileNavPanel { position: absolute; top: calc(100% + 12px); right: 0; min-width: 180px; padding: 12px 0; border: 1px solid var(--line); background: var(--paper); color: var(--ink); box-shadow: 0 12px 30px rgba(21,32,27,.12); }
+.mobileNavDark .mobileNavPanel { border-color: var(--light-line); background: var(--forest); color: var(--ivory); }
+.mobileNavPanel a { display: block; padding: 12px 18px; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.mobileNavPanel a.active { color: var(--fern); }
+.mobileNavDark .mobileNavPanel a.active { color: var(--sage); }
+.mobileNavButton:focus-visible, .contactButton:focus-visible, .siteLinks a:focus-visible { outline: 2px solid var(--fern); outline-offset: 3px; }
 .sectionPad { padding-left: 3.5vw; padding-right: 3.5vw; }
 .kicker { margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .kicker::before { content: "●"; color: var(--fern); margin-right: 10px; }
@@ -126,7 +134,13 @@ p { text-wrap: pretty; }
 .systemGrid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .systemGrid article { min-height: 230px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .status { display: inline-block; padding: 6px 9px; border: 1px solid var(--ink); border-radius: 99px; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.status.live { background: var(--sage); }.status.build { background: var(--mist); }.status.next { color: var(--muted); border-color: var(--muted); }
+.status.live { background: var(--sage); }.status.testing { background: var(--mist); color: var(--ink); }.status.build { background: var(--mist); }.status.next { color: var(--muted); border-color: var(--muted); }
+.lifecycleGrid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.lifecycleGrid article { min-height: 180px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.lifecycleGrid span { display: block; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--fern); }
+.lifecycleGrid h4 { margin: 40px 0 12px; font: 22px Georgia, serif; }.lifecycleGrid p { margin: 0; font-size: 12px; line-height: 1.55; color: var(--muted); }
+.caseNote { max-width: 820px; margin: 35px 0 0; font-size: 14px; line-height: 1.65; color: var(--muted); }
+.salesforceExperience, .currentExperience, .careerHistory, .education { padding-top: 95px; padding-bottom: 100px; }
 .systemGrid h4 { margin: 52px 0 12px; font: 24px Georgia, serif; }.systemGrid p { margin: 0; font-size: 12px; line-height: 1.55; color: var(--muted); }
 .caseDecision { display: grid; grid-template-columns: repeat(3,1fr); border-bottom: 1px solid var(--light-line); }
 .caseDecision > div { padding: 45px 3vw 10px 0; }.caseDecision > div + div { padding-left: 3vw; border-left: 1px solid var(--light-line); }
@@ -140,7 +154,6 @@ p { text-wrap: pretty; }
 .nextPage { padding-top: 90px; padding-bottom: 90px; display: grid; grid-template-columns: .5fr 1.5fr auto; gap: 5vw; align-items: end; }.nextPage h2 { margin: 0; font: 44px/1.05 Georgia, serif; }
 
 .experienceHero { background: var(--forest); }
-.currentExperience, .careerHistory, .education { padding-top: 95px; padding-bottom: 100px; }
 .roleList { margin-top: 55px; border-top: 1px solid var(--line); }
 .roleList article { display: grid; grid-template-columns: .65fr 2fr; gap: 5vw; padding: 36px 0 45px; border-bottom: 1px solid var(--line); }
 .roleList time, .historyRows time { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -155,14 +168,14 @@ p { text-wrap: pretty; }
 .foundations { padding-top: 95px; padding-bottom: 100px; }.foundationCards, .credentialGrid { display: grid; grid-template-columns: repeat(2,1fr); margin-top: 55px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }.foundationCards article, .credentialGrid article { min-height: 220px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }.foundationCards h3, .credentialGrid h3 { margin: 0 0 50px; font: 29px/1.1 Georgia, serif; }.foundationCards p, .credentialGrid p { margin: 0; line-height: 1.6; }
 
 @media (max-width: 820px) {
-  .siteNav { grid-template-columns: 1fr auto; }.siteLinks { display: none; }.sectionNav { padding-left: 5vw; padding-right: 5vw; gap: 20px; }
+  .siteNav { grid-template-columns: 1fr auto auto; gap: 12px; }.siteLinks { display: none; }.mobileNavWrap { display: block; }.sectionNav { padding-left: 5vw; padding-right: 5vw; gap: 20px; }
   .homeHero { min-height: 800px; }.heroIdentity p:last-child { max-width: 190px; text-align: right; }.heroCore h1 { font-size: clamp(55px, 15vw, 84px); }.heroSummary { margin-left: 0; }.heroEvidence { grid-template-columns: 1fr 1fr; }.heroEvidence .arrowLink { align-self: center; }
   .homeStatement, .homeToolkit, .homeAbout, .featureGrid, .architectureHead, .caseSplit, .legacyHeader { grid-template-columns: 1fr; gap: 35px; }
   .homeStatement, .homeCapabilities, .homeFeature, .homeWork, .homeToolkit, .homeAbout, .contactSection, .pageHero, .projectCase, .currentExperience, .legacyExperience, .careerHistory, .foundations, .education, .nextPage { padding-left: 5vw; padding-right: 5vw; }
   .capabilityList article { grid-template-columns: 35px 1fr; }.capabilityList p { grid-column: 2; }.workCards { grid-template-columns: 1fr; }.workCards article { min-height: 330px; }
   .compactTools > div { grid-template-columns: 1fr; gap: 15px; }.contactSection > div { flex-direction: column; }.siteFooter { grid-template-columns: 1fr 1fr; }.siteFooter p:first-of-type { display: none; }
   .caseHeader, .caseLead { grid-template-columns: 1fr; display: grid; }.caseHeader > p { text-align: left; }.caseFacts, .projectNarrative, .caseDecision, .legacyNumbers { grid-template-columns: 1fr; }.caseFacts div, .projectNarrative article, .caseDecision > div, .legacyNumbers div { min-height: 0; padding: 30px 0 !important; border-left: 0 !important; border-bottom: 1px solid currentColor; }
-  .architecturePanel { margin: 0 -5vw; padding-left: 5vw; padding-right: 5vw; }.systemGrid { grid-template-columns: 1fr; }.systemGrid article { min-height: 0; }.nextPage { grid-template-columns: 1fr; }
+  .architecturePanel { margin: 0 -5vw; padding-left: 5vw; padding-right: 5vw; }.systemGrid, .lifecycleGrid { grid-template-columns: 1fr; }.systemGrid article, .lifecycleGrid article { min-height: 0; }.nextPage { grid-template-columns: 1fr; }
   .roleList article, .historyRows article { grid-template-columns: 1fr; gap: 15px; }.foundationCards, .credentialGrid { grid-template-columns: 1fr; }
 }
 
