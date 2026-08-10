@@ -1,79 +1,103 @@
 import { ArrowLink, SiteFooter, SiteNav } from "./components";
+import { ConcentricGraphic } from "./ConcentricGraphic";
 
 export default function Home() {
   return (
     <main>
-      <SiteNav dark active="home" />
-      <header className="homeHero" id="top">
-        <div className="heroIdentity">
-          <p>Katie Pirsoaga</p>
-          <p>British · Based in Romania · Working internationally</p>
+      <SiteNav active="home" />
+      <header className="homeHero sectionPad" id="top">
+        <div className="heroTop">
+          <p className="heroIdentity">Katie Pirsoaga</p>
+          <p className="heroLocation">British · Based in Romania · Working internationally</p>
         </div>
-        <div className="heroCore">
-          <p className="kicker lightText">International Operations &amp; Systems Manager</p>
-          <h1>I build the structure<br />behind complicated work.</h1>
-          <p className="heroSummary">Operations, digital systems and communication—brought together around the people who need the work to function.</p>
-        </div>
-        <div className="heroEvidence">
-          <div><strong>6</strong><span>international conferences supported in 2026</span></div>
-          <div><strong>800+</strong><span>abstracts structured in the proceedings library</span></div>
-          <div><strong>2</strong><span>independently designed digital products</span></div>
-          <ArrowLink href="/projects">Explore the work</ArrowLink>
+        <div className="heroMain">
+          <div className="heroCopy">
+            <p className="kicker">English communication · Conference operations · Digital systems</p>
+            <h1>
+              <span>I make complicated</span>
+              <span className="heroAccent"><em>work.</em></span>
+            </h1>
+            <p className="heroSummary">
+              I teach and coach professional English, run international conference operations and build human-centred digital systems around the people who use them.
+            </p>
+            <ArrowLink href="/projects">Explore the work</ArrowLink>
+          </div>
+          <ConcentricGraphic className="heroGraphic" />
         </div>
       </header>
 
       <section className="homeStatement sectionPad">
         <p className="kicker">How I work</p>
-        <div>
+        <div className="statementGrid">
           <h2>I do not separate the system from the work.</h2>
           <p>I learn how an organisation or person actually operates, find where the friction lives, and build something they can control, understand and sustain.</p>
         </div>
       </section>
 
-      <section className="homeCapabilities sectionPad">
-        <div className="sectionTop"><p className="kicker">Capabilities</p><p>Four connected areas</p></div>
-        <div className="capabilityList">
-          <article><span>01</span><h3>Operations &amp; delivery</h3><p>Conference delivery, workflows, documentation, stakeholders, administration and international coordination.</p></article>
-          <article><span>02</span><h3>Systems &amp; infrastructure</h3><p>Platform architecture, VPS environments, migrations, publishing systems, monitoring and CRM.</p></article>
-          <article><span>03</span><h3>Product &amp; user experience</h3><p>Requirements, accessible interfaces, content models, testing and maintainable client-owned systems.</p></article>
-          <article><span>04</span><h3>Communication &amp; content</h3><p>English education, academic communication, proofreading, social media and video production.</p></article>
+      <section className="homePillars sectionPad">
+        <div className="sectionTop"><p className="kicker">Three professional pillars</p><p>Current practice</p></div>
+        <div className="pillarList">
+          <article>
+            <span className="pillarNumber">01</span>
+            <h3>English communication and education</h3>
+            <p>Professional English, conversation, interview preparation, proofreading and communication coaching for learners, schools and technical teams.</p>
+          </article>
+          <article>
+            <span className="pillarNumber">02</span>
+            <h3>International conference operations</h3>
+            <p>Conference delivery, academic platforms, hybrid events, publishing, documentation and the operational systems that support them.</p>
+          </article>
+          <article>
+            <span className="pillarNumber">03</span>
+            <h3>Human-centred digital systems and products</h3>
+            <p>Client-owned websites, accessible learning products and connected platforms designed around real users and constraints.</p>
+          </article>
         </div>
       </section>
 
-      <section className="homeFeature sectionPad darkSection">
-        <div className="sectionTop lightLine"><p className="kicker lightText">Flagship work</p><p>International Linguistic Society · Nonprofit</p></div>
-        <div className="featureGrid">
+      <section className="homeJourney sectionPad">
+        <div className="sectionTop"><p className="kicker">ILS operational journey</p><p>International Linguistic Society</p></div>
+        <div className="journeyGrid">
           <div>
-            <h2>One researcher journey.<br /><em>Specialist systems underneath.</em></h2>
-            <p>I manage conference operations while designing the academic ecosystem behind them: Pretalx, OJS, VPS infrastructure, monitoring, Google Workspace, automation and the next registration layer.</p>
-            <ArrowLink href="/projects#ils">Explore the ILS case study</ArrowLink>
+            <h2>One connected conference process.</h2>
+            <p>Pretalx and Pretix are operational and currently undergoing user testing as part of one connected conference and publication process.</p>
+            <ArrowLink href="/projects#ils">Read the full case study</ArrowLink>
           </div>
-          <div className="miniArchitecture" aria-label="Simplified ILS platform journey">
-            <span>Discover<b>WordPress</b></span><i>↓</i>
-            <span>Submit &amp; review<b>Pretalx</b></span><i>↓</i>
-            <span>Register<b>Pretix</b></span><i>↓</i>
-            <span>Publish<b>OJS</b></span>
+          <div className="miniArchitecture" aria-label="Reduced ILS operational journey">
+            <span>Discover<b>WordPress</b></span>
+            <i>↓</i>
+            <span>Submit and review<b>Pretalx</b></span>
+            <i>↓</i>
+            <span>Register and pay<b>Pretix</b></span>
+            <i>↓</i>
+            <span>Publish<b>Open Journal Systems</b></span>
           </div>
         </div>
       </section>
 
       <section className="homeWork sectionPad">
-        <div className="sectionTop"><p className="kicker">Selected work</p><ArrowLink href="/projects">View all projects</ArrowLink></div>
+        <div className="sectionTop"><p className="kicker">Selected work</p><ArrowLink href="/projects">View all work</ArrowLink></div>
         <div className="workCards">
+          <article className="workCardFlagship">
+            <p className="cardMeta">Flagship ecosystem · Nonprofit</p>
+            <h3>International Linguistic Society</h3>
+            <p>International conference operation and the connected academic platform behind it.</p>
+            <div className="cardLinks"><ArrowLink href="/projects#ils">Case study</ArrowLink></div>
+          </article>
           <article>
             <p className="cardMeta">Client-owned website · Production</p>
             <h3>Joe Poon Photography</h3>
-            <p>A professional portfolio with true ownership, no permanent builder subscription and a simple editing workflow.</p>
-            <div className="cardLinks"><ArrowLink href="/projects#joe">Case study</ArrowLink><ArrowLink href="https://g-o-g.pages.dev/" external>Live site</ArrowLink><ArrowLink href="https://github.com/KPirsoaga/G.O.G" external>GitHub</ArrowLink></div>
+            <p>A professional portfolio with true ownership and a simple editing workflow.</p>
+            <div className="cardLinks"><ArrowLink href="/projects#joe">Case study</ArrowLink><ArrowLink href="https://g-o-g.pages.dev/" external>Live site</ArrowLink></div>
           </article>
           <article>
             <p className="cardMeta">Accessible learning platform · Stable core</p>
             <h3>Say It Your Way Romanian</h3>
-            <p>A teacher-supported PWA designed around dyslexia, ADHD, practical speech and repeated weekly learning.</p>
-            <div className="cardLinks"><ArrowLink href="/projects#romanian">Case study</ArrowLink><ArrowLink href="https://say-it-your-way-romanian.pages.dev/" external>Live app</ArrowLink><ArrowLink href="https://github.com/KPirsoaga/Say_It_Your_Way_Romanian" external>GitHub</ArrowLink></div>
+            <p>A teacher-supported PWA designed around dyslexia, ADHD and repeated weekly learning.</p>
+            <div className="cardLinks"><ArrowLink href="/projects#romanian">Case study</ArrowLink><ArrowLink href="https://say-it-your-way-romanian.pages.dev/" external>Live app</ArrowLink></div>
           </article>
           <article>
-            <p className="cardMeta">English education · 2022—present</p>
+            <p className="cardMeta">English education · 2022 to present</p>
             <h3>English for real life and work</h3>
             <p>Personalised English for private learners, professionals, schools and international technical teams.</p>
             <div className="cardLinks"><ArrowLink href="/experience#english">Experience</ArrowLink><ArrowLink href="https://devaccelerator.io/" external>DevAccelerator</ArrowLink></div>
@@ -81,26 +105,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homeToolkit sectionPad softSection">
-        <div className="toolkitIntro"><p className="kicker">Working toolkit</p><h2>Applications in context.</h2></div>
-        <div className="compactTools">
-          <div><b>Own &amp; administer</b><p>Pretalx · OJS · WordPress · Google Workspace · VPS infrastructure</p></div>
-          <div><b>Build &amp; configure</b><p>React · TypeScript · Vite · TinaCMS · Salesforce · Cloudflare</p></div>
-          <div><b>Operate &amp; publish</b><p>WooCommerce · Stripe · Sage · Dayforce · Canva · YouTube</p></div>
-          <div><b>Developing &amp; roadmap</b><p>n8n · Pretix · Venueless · certificates · researcher accounts</p></div>
+      <section className="homeAbout sectionPad" id="about">
+        <p className="kicker">About</p>
+        <div className="aboutGrid">
+          <h2>I am useful where there are too many moving parts.</h2>
+          <p>My career crosses education, international operations, business management, academic conferences and digital products. The thread is not unrelated jobs. It is understanding how people, processes, communication and systems must work together.</p>
+          <ArrowLink href="/experience">Explore my experience</ArrowLink>
         </div>
       </section>
 
-      <section className="homeAbout sectionPad" id="about">
-        <p className="kicker">The short version</p>
-        <div><h2>I am useful where there are too many moving parts.</h2><p>My background crosses operations, education, business management, academic conferences and digital product development. That range lets me communicate with the person using a system, the person responsible for the outcome and the technical people building it.</p><ArrowLink href="/experience">Explore my experience</ArrowLink></div>
-      </section>
-
-      <section className="contactSection sectionPad">
-        <p className="kicker">Start a conversation</p>
+      <section className="contactSection sectionPad" id="contact">
+        <p className="kicker">Contact</p>
         <h2>Have something complicated?</h2>
-        <a href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s make it work. <span>↗</span></a>
-        <div><p>International operations · systems · communication</p><p><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p></div>
+        <a className="contactLink" href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
+        <p className="contactMeta"><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p>
       </section>
       <SiteFooter />
     </main>

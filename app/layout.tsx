@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Katie Pirsoaga | International Operations & Systems Manager",
+  title: "Katie Pirsoaga | English · Conference Operations · Digital Systems",
   description:
-    "Katie Pirsoaga brings together operations, digital systems and communication for international organisations and projects.",
+    "Professional English communication, international conference operations and human-centred digital products.",
+  openGraph: {
+    title: "Katie Pirsoaga | English · Conference Operations · Digital Systems",
+    description:
+      "Professional English communication, international conference operations and human-centred digital products.",
+    type: "website",
+    siteName: "Katie Pirsoaga",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Katie Pirsoaga | English · Conference Operations · Digital Systems",
+    description:
+      "Professional English communication, international conference operations and human-centred digital products.",
+  },
   other: {
     "codex-preview": "development",
   },
@@ -31,12 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en-GB">
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
