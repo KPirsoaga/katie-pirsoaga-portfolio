@@ -1,6 +1,5 @@
-import { ArrowLink, PageLocator, SiteFooter, SiteNav } from "./components";
+import { ArrowLink, SiteFooter, SiteNav } from "./components";
 import { ConcentricGraphic } from "./ConcentricGraphic";
-import { FlagshipCard, MetroStrip } from "./DisplayPatterns";
 
 export default function Home() {
   return (
@@ -12,9 +11,8 @@ export default function Home() {
           <p className="heroLocation">British · Based in Romania · Working internationally</p>
         </div>
         <div className="heroMain">
-          <ConcentricGraphic className="heroGraphic" />
           <div className="heroCopy">
-            <p className="kicker kickerAccent">English communication · Conference operations · Digital systems</p>
+            <p className="kicker">English communication · Conference operations · Digital systems</p>
             <h1>
               <span>I make complicated</span>
               <span className="heroAccent"><em>work.</em></span>
@@ -24,6 +22,7 @@ export default function Home() {
             </p>
             <ArrowLink href="/projects">Explore the work</ArrowLink>
           </div>
+          <ConcentricGraphic className="heroGraphic" />
         </div>
       </header>
 
@@ -37,27 +36,21 @@ export default function Home() {
 
       <section className="homePillars sectionPad">
         <div className="sectionTop"><p className="kicker">Three professional pillars</p><p>Current practice</p></div>
-        <div className="pillarIndex">
+        <div className="pillarList">
           <article>
             <span className="pillarNumber">01</span>
-            <div>
-              <h3>English communication and education</h3>
-              <p>Professional English, conversation, interview preparation, proofreading and communication coaching for learners, schools and technical teams.</p>
-            </div>
+            <h3>English communication and education</h3>
+            <p>Professional English, conversation, interview preparation, proofreading and communication coaching for learners, schools and technical teams.</p>
           </article>
           <article>
             <span className="pillarNumber">02</span>
-            <div>
-              <h3>International conference operations</h3>
-              <p>Conference delivery, academic platforms, hybrid events, publishing, documentation and the operational systems that support them.</p>
-            </div>
+            <h3>International conference operations</h3>
+            <p>Conference delivery, academic platforms, hybrid events, publishing, documentation and the operational systems that support them.</p>
           </article>
           <article>
             <span className="pillarNumber">03</span>
-            <div>
-              <h3>Human-centred digital systems and products</h3>
-              <p>Client-owned websites, accessible learning products and connected platforms designed around real users and constraints.</p>
-            </div>
+            <h3>Human-centred digital systems and products</h3>
+            <p>Client-owned websites, accessible learning products and connected platforms designed around real users and constraints.</p>
           </article>
         </div>
       </section>
@@ -70,27 +63,40 @@ export default function Home() {
             <p>Pretalx and Pretix are operational and currently undergoing user testing as part of one connected conference and publication process.</p>
             <ArrowLink href="/projects#ils">Read the full case study</ArrowLink>
           </div>
-          <MetroStrip compact />
+          <div className="miniArchitecture" aria-label="Reduced ILS operational journey">
+            <span>Discover<b>WordPress</b></span>
+            <i>↓</i>
+            <span>Submit and review<b>Pretalx</b></span>
+            <i>↓</i>
+            <span>Register and pay<b>Pretix</b></span>
+            <i>↓</i>
+            <span>Publish<b>Open Journal Systems</b></span>
+          </div>
         </div>
       </section>
 
       <section className="homeWork sectionPad">
         <div className="sectionTop"><p className="kicker">Selected work</p><ArrowLink href="/projects">View all work</ArrowLink></div>
-        <div className="workCards workCardsAsymmetric">
-          <FlagshipCard />
-          <article className="workCardJoe">
+        <div className="workCards">
+          <article className="workCardFlagship">
+            <p className="cardMeta">Flagship ecosystem · Nonprofit</p>
+            <h3>International Linguistic Society</h3>
+            <p>International conference operation and the connected academic platform behind it.</p>
+            <div className="cardLinks"><ArrowLink href="/projects#ils">Case study</ArrowLink></div>
+          </article>
+          <article>
             <p className="cardMeta">Client-owned website · Production</p>
             <h3>Joe Poon Photography</h3>
             <p>A professional portfolio with true ownership and a simple editing workflow.</p>
             <div className="cardLinks"><ArrowLink href="/projects#joe">Case study</ArrowLink><ArrowLink href="https://g-o-g.pages.dev/" external>Live site</ArrowLink></div>
           </article>
-          <article className="workCardRomanian">
+          <article>
             <p className="cardMeta">Accessible learning platform · Stable core</p>
             <h3>Say It Your Way Romanian</h3>
             <p>A teacher-supported PWA designed around dyslexia, ADHD and repeated weekly learning.</p>
             <div className="cardLinks"><ArrowLink href="/projects#romanian">Case study</ArrowLink><ArrowLink href="https://say-it-your-way-romanian.pages.dev/" external>Live app</ArrowLink></div>
           </article>
-          <article className="workCardEnglish">
+          <article>
             <p className="cardMeta">English education · 2022 to present</p>
             <h3>English for real life and work</h3>
             <p>Personalised English for private learners, professionals, schools and international technical teams.</p>
@@ -110,7 +116,6 @@ export default function Home() {
 
       <section className="contactSection sectionPad" id="contact">
         <p className="kicker">Contact</p>
-        <p className="contactContext">English coaching, conference operations, or digital systems.</p>
         <h2>Have something complicated?</h2>
         <a className="contactLink" href="mailto:kpirsoaga@protonmail.com">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
         <p className="contactMeta"><a href="https://www.linkedin.com/in/katie-pirsoaga">LinkedIn ↗</a> · Pitești, Romania</p>
