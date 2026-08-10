@@ -240,18 +240,6 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
   fill: var(--black);
 }
 
-.heroDiscLabelPeopleMobile,
-.heroDiscLabelEnglishMobile,
-.heroDiscLabelConferencesMobile {
-  display: none;
-}
-
-.heroDiscLabelPeopleDesktop,
-.heroDiscLabelEnglishDesktop,
-.heroDiscLabelConferencesDesktop {
-  display: block;
-}
-
 .heroHeadline {
   position: relative;
   z-index: 1;
@@ -398,25 +386,9 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
   }
 }
 
-@media (max-width: 1199px) {
-  .heroDiscLabelPeopleDesktop {
-    display: none;
-  }
-
-  .heroDiscLabelPeopleMobile {
-    display: block;
-  }
-}
-
 @media (max-width: 767px) {
-  .heroDiscLabelEnglishDesktop,
-  .heroDiscLabelConferencesDesktop {
+  .heroDiscLabel {
     display: none;
-  }
-
-  .heroDiscLabelEnglishMobile,
-  .heroDiscLabelConferencesMobile {
-    display: block;
   }
 
   .heroScene {
@@ -427,10 +399,6 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
     width: clamp(14rem, 68vw, 21rem);
     right: clamp(-2rem, -10vw, 0rem);
     top: 58%;
-  }
-
-  .heroDiscLabel {
-    font-size: clamp(12px, 3.2vw, 14px);
   }
 
   .heroLine--main {
