@@ -11,11 +11,11 @@ worker="${SITES_PROJECT_ROOT}/dist/server/index.js"
 hosting="${SITES_PROJECT_ROOT}/dist/.openai/hosting.json"
 
 [[ -f "${worker}" ]] || {
-  echo "Missing Sites Worker entry: dist/server/index.js" >&2
+  echo "Missing Worker entry: dist/server/index.js" >&2
   exit 66
 }
 [[ -f "${hosting}" ]] || {
-  echo "Missing packaged Sites manifest: dist/.openai/hosting.json" >&2
+  echo "Missing hosting manifest: dist/.openai/hosting.json" >&2
   exit 66
 }
 
@@ -34,4 +34,4 @@ if (!worker.default || typeof worker.default.fetch !== "function") {
 }
 NODE
 
-echo "Validated Sites artifact: ESM Worker default.fetch and hosting manifest are present."
+echo "Validated Cloudflare artifact: ESM Worker default.fetch and hosting manifest are present."

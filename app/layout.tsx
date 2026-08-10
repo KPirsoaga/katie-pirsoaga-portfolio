@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     description:
       "Professional English communication, international conference operations and human-centred digital products.",
   },
-  other: {
-    "codex-preview": "development",
-  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

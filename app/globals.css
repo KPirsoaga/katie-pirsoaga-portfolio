@@ -15,7 +15,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0;
   background: var(--black);
@@ -23,6 +23,7 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
+  overflow-x: clip;
 }
 body.menuOpen { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
@@ -111,6 +112,11 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
 }
 .mobileNavWrap { display: none; justify-self: end; }
 .mobileNavButton {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 16px;
   border: 1px solid var(--ivory);
   border-radius: 999px;
@@ -623,6 +629,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
   border-bottom: 1px solid var(--line);
   background: rgba(23, 25, 22, 0.96);
   backdrop-filter: blur(12px);
+  overflow-x: clip;
+  max-width: 100%;
 }
 .sectionNav > span {
   font-size: 11px;
@@ -641,6 +649,10 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
   white-space: nowrap;
   position: relative;
   scrollbar-width: none;
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+  max-width: 100%;
   mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
   -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
   padding-right: 24px;
@@ -1357,8 +1369,14 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + var(--section-nav-heig
   }
   .roleList article,
   .historyRows article { grid-template-columns: 1fr; gap: 12px; }
-  .caseHeader { align-items: start; }
-  .caseHeader > p { text-align: left; }
+  .caseHeader {
+    flex-direction: column;
+    align-items: start;
+  }
+  .caseHeader > p {
+    text-align: left;
+    max-width: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
